@@ -1,0 +1,19 @@
+{
+  "item.ichorio.enderium_ingot": "Enderium Ingot",
+  "item.ichorio.raw_enderium": "Raw Enderium",
+  "item.ichorio.ignar": "Ignar",
+
+
+  "block.ichorio.enderium_block": "Block of Enderium",
+  "block.ichorio.enderium_ore": "Enderium Ore",
+  "block.ichorio.enderium_deepslate_ore": "Deeplaste Enderium Ore",
+  "block.ichorio.raw_enderium_block": "Block of Raw Enderium",
+  "block.ichorio.netherine_block": "Block of Netherine",
+  "block.ichorio.netherine_ore.block": "Netherine Ore",
+  "block.ichorio.ignar_ore.block": "Ignar Ore",
+  "block.ichorio.magic_block": "Magic Block",
+  "tooltip.ichorio.magic_block.tooltip": "I like RAW!",
+  "tooltip.ichorio.chisel.shift_down": "TUCH ME!",
+  "tooltip.ichorio.chisel": "Just chisel",
+  "tooltip.ichorio.ignar.shift_down": "The Blood of the Ancient Guardians is now nothing more than fuel…"
+}
