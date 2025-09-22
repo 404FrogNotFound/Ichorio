@@ -26,6 +26,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
+        dropSelf(ModBlocks.PRIMAL_STONE.get());
         dropSelf(ModBlocks.ENDERIUM_BLOCK.get());
         dropSelf(ModBlocks.RAW_ENDERIUM_BLOCK.get());
         dropSelf(ModBlocks.NETHERINE_BLOCK.get());

@@ -14,6 +14,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+        blockWithItem(ModBlocks.PRIMAL_STONE);
         blockWithItem(ModBlocks.RAW_ENDERIUM_BLOCK);
         blockWithItem(ModBlocks.MAGIC_BLOCK);
         blockWithItem(ModBlocks.IGNAR_ORE);
@@ -22,9 +23,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.ENDERIUM_DEEPSLATE_ORE);
         blockWithItem(ModBlocks.ENDERIUM_BLOCK);
         blockWithItem(ModBlocks.NETHERINE_BLOCK);
-
     }
-
     private void blockWithItem(DeferredBlock<?> deferredBlock) {
         simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }

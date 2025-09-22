@@ -36,7 +36,6 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy("has_netherine_block", has(ModBlocks.NETHERINE_BLOCK)).save(recipeOutput);
         oreSmelting(recipeOutput, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT, 0.25f, 200, "enderium_ingot");
         oreBlasting(recipeOutput, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT, 0.25f, 100, "enderium_ingot");
-        oreBlasting(recipeOutput, ENDERIUM_SMELTABLES, RecipeCategory.MISC, ModItems.ENDERIUM_INGOT, 0.25f, 100, "enderium_ingot");
     }
 
     protected static void oreSmelting(RecipeOutput recipeOutput, List<ItemLike> pIngredients,

@@ -21,6 +21,7 @@ public class ModCreativeModeTabs {
                             .title(Component.translatable("Ichorio"))
                     .displayItems((parameters, output) -> {
 
+                        output.accept(ModBlocks.PRIMAL_STONE);
                         output.accept(ModBlocks.NETHERINE_ORE);
                         output.accept(ModBlocks.IGNAR_ORE);
                         output.accept(ModBlocks.ENDERIUM_ORE);

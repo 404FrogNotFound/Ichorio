@@ -19,6 +19,7 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.PRIMAL_STONE.get())
                 .add(ModBlocks.ENDERIUM_BLOCK.get())
                 .add(ModBlocks.ENDERIUM_ORE.get())
                 .add(ModBlocks.ENDERIUM_DEEPSLATE_ORE.get())
@@ -29,7 +30,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.MAGIC_BLOCK.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.ENDERIUM_ORE.get());
+                .add(ModBlocks.ENDERIUM_ORE.get())
+                .add(ModBlocks.PRIMAL_STONE.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.ENDERIUM_DEEPSLATE_ORE.get());
 
