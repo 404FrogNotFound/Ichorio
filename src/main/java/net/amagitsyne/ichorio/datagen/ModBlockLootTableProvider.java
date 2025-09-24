@@ -33,6 +33,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.MAGIC_BLOCK.get());
         dropSelf(ModBlocks.IGNAR_ORE.get());
 
+        //ANCIENTWOOD:
+        dropSelf(ModBlocks.ANCIENTWOOD_PLANKS.get());
+        dropSelf(ModBlocks.ANCIENTWOOD_STAIRS.get());
+        add(ModBlocks.ANCIENTWOOD_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.ANCIENTWOOD_SLAB.get()));
+        dropSelf(ModBlocks.ANCIENTWOOD_FENCE.get());
+        dropSelf(ModBlocks.ANCIENTWOOD_FENCE_GATE.get());
+        dropSelf(ModBlocks.ANCIENTWOOD_BUTTON.get());
+        dropSelf(ModBlocks.ANCIENTWOOD_DOOR.get());
+        dropSelf(ModBlocks.ANCIENTWOOD_TRAPDOOR.get());
 
         add(ModBlocks.ENDERIUM_ORE.get(),
                 block -> createOreDrop(ModBlocks.ENDERIUM_ORE.get(), ModItems.RAW_ENDERIUM.get()));
@@ -42,6 +52,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                 block -> createVariableOreDrop(block, ModItems.NETHERINE.get(), 2, 5));
 
     }
+
     protected LootTable.Builder createVariableOreDrop(Block block, Item item, int minDrop, int maxDrop) {
         HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 

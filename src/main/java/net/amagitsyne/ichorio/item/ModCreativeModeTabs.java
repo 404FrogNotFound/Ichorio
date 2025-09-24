@@ -22,6 +22,16 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
 
                         output.accept(ModBlocks.PRIMAL_STONE);
+                        output.accept(ModBlocks.ANCIENTWOOD_PLANKS);
+                        output.accept(ModBlocks.ANCIENTWOOD_SLAB);
+                        output.accept(ModBlocks.ANCIENTWOOD_STAIRS);
+                        output.accept(ModBlocks.ANCIENTWOOD_BUTTON);
+                        output.accept(ModBlocks.ANCIENTWOOD_DOOR);
+                        output.accept(ModBlocks.ANCIENTWOOD_TRAPDOOR);
+                        output.accept(ModBlocks.ANCIENTWOOD_FENCE);
+                        output.accept(ModBlocks.ANCIENTWOOD_FENCE_GATE);
+                        output.accept(ModBlocks.ANCIENTWOOD_PLATE);
+
                         output.accept(ModBlocks.NETHERINE_ORE);
                         output.accept(ModBlocks.IGNAR_ORE);
                         output.accept(ModBlocks.ENDERIUM_ORE);

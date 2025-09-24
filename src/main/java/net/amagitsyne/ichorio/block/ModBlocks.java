@@ -8,11 +8,11 @@ import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.RotatedPillarBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -26,9 +26,16 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> PRIMAL_STONE = registerBlock("primal_stone",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(12F, 1200.0F)
+                    .strength(5F, 6.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.CALCITE)));
+    public static final DeferredBlock<Block> ANCIENTWOOD_PLANKS = registerBlock("ancientwood_stone",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2F, 3.0F)
+                    .mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS)
+                    .sound(SoundType.WOOD)
+                    .ignitedByLava()));
 
     public static final DeferredBlock<Block> ENDERIUM_BLOCK = registerBlock("enderium_block",
             () -> new Block(BlockBehaviour.Properties.of()
@@ -66,13 +73,50 @@ public class ModBlocks {
                             .strength(8F, 1200.0F)
                             .requiresCorrectToolForDrops()
                             .sound(SoundType.STONE)));
-
-
     public static final DeferredBlock<Block> NETHERINE_BLOCK = registerBlock("netherine_block",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3F, 6.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.AMETHYST)));
+
+    //ANCIENTWOOD:
+    public static final DeferredBlock<StairBlock> ANCIENTWOOD_STAIRS = registerBlock("ancientwood_stairs",
+            () -> new StairBlock(ModBlocks.ANCIENTWOOD_PLANKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.of()
+                            .strength(2f, 3f).
+                            requiresCorrectToolForDrops()));
+    public static final DeferredBlock<SlabBlock> ANCIENTWOOD_SLAB = registerBlock("ancientwood_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)
+                    .requiresCorrectToolForDrops()));
+    public static final DeferredBlock<PressurePlateBlock> ANCIENTWOOD_PLATE = registerBlock("ancientwood_plate",
+            () -> new PressurePlateBlock(BlockSetType.OAK,
+                    BlockBehaviour.Properties.of()
+                            .strength(2f, 3f)));
+    public static final DeferredBlock<ButtonBlock> ANCIENTWOOD_BUTTON = registerBlock("ancientwood_button",
+            () -> new ButtonBlock(BlockSetType.OAK, 20,
+                    BlockBehaviour.Properties.of()
+                            .strength(2f, 3f)
+                            .noCollission()));
+    public static final DeferredBlock<FenceBlock> ANCIENTWOOD_FENCE = registerBlock("ancientwood_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)));
+    public static final DeferredBlock<FenceGateBlock> ANCIENTWOOD_FENCE_GATE = registerBlock("ancientwood_fence_gate",
+            () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of()
+                    .strength(2f, 3f)));
+    public static final DeferredBlock<DoorBlock> ANCIENTWOOD_DOOR = registerBlock("ancientwood_stairs",
+            () -> new DoorBlock(BlockSetType.OAK,
+                    BlockBehaviour.Properties.of()
+                            .strength(2f, 3f)
+                            .requiresCorrectToolForDrops()
+                            .noOcclusion()));
+    public static final DeferredBlock<TrapDoorBlock> ANCIENTWOOD_TRAPDOOR = registerBlock("ancientwood_trapdoor",
+            () -> new TrapDoorBlock(BlockSetType.OAK,
+                    BlockBehaviour.Properties.of()
+                            .strength(2f, 3f).
+                            requiresCorrectToolForDrops().noOcclusion()));
+
+
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             () -> new MagicBlock(BlockBehaviour.Properties.of()
                     .strength(2f, 6f)
