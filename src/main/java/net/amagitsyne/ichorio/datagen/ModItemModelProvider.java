@@ -25,6 +25,10 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         buttonItem(ModBlocks.ANCIENTWOOD_BUTTON, ModBlocks.ANCIENTWOOD_PLANKS);
         fenceItem(ModBlocks.ANCIENTWOOD_FENCE, ModBlocks.ANCIENTWOOD_PLANKS);
+
+        basicItem(ModBlocks.ANCIENTWOOD_DOOR.asItem());
+
+
     }
     public void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> baseBlock) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))

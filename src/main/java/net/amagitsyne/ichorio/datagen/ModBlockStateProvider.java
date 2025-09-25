@@ -33,6 +33,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         pressurePlateBlock(ModBlocks.ANCIENTWOOD_PLATE.get(), blockTexture(ModBlocks.ANCIENTWOOD_PLANKS.get()));
         fenceBlock(ModBlocks.ANCIENTWOOD_FENCE.get(), blockTexture(ModBlocks.ANCIENTWOOD_PLANKS.get()));
         fenceGateBlock(ModBlocks.ANCIENTWOOD_FENCE_GATE.get(), blockTexture(ModBlocks.ANCIENTWOOD_PLANKS.get()));
+        doorBlockWithRenderType(ModBlocks.ANCIENTWOOD_DOOR.get(), modLoc("block/ancientwood_door_bottom"), modLoc("block/ancientwood_door_top"),"cutout");
 
         blockItem(ModBlocks.ANCIENTWOOD_STAIRS);
         blockItem(ModBlocks.ANCIENTWOOD_SLAB);
@@ -46,11 +47,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath()));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("ichorio:block/" + deferredBlock.getId().getPath()));
     }
 
     private void blockItem(DeferredBlock<?> deferredBlock, String appendix) {
-        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("tutorialmod:block/" + deferredBlock.getId().getPath() + appendix));
+        simpleBlockItem(deferredBlock.get(), new ModelFile.UncheckedModelFile("ichorio:block/" + deferredBlock.getId().getPath() + appendix));
     }
 
 }
