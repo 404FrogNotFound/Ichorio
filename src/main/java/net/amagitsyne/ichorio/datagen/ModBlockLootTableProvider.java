@@ -43,6 +43,9 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ANCIENTWOOD_BUTTON.get());
         dropSelf(ModBlocks.ANCIENTWOOD_DOOR.get());
         dropSelf(ModBlocks.ANCIENTWOOD_TRAPDOOR.get());
+        dropSelf(ModBlocks.ANCIENTWOOD_PLATE.get());
+        add(ModBlocks.ANCIENTWOOD_DOOR.get(),
+                block -> createDoorTable(ModBlocks.ANCIENTWOOD_DOOR.get()));
 
         add(ModBlocks.ENDERIUM_ORE.get(),
                 block -> createOreDrop(ModBlocks.ENDERIUM_ORE.get(), ModItems.RAW_ENDERIUM.get()));

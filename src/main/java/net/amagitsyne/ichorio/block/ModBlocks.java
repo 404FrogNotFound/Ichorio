@@ -29,7 +29,7 @@ public class ModBlocks {
                     .strength(5F, 6.0F)
                     .requiresCorrectToolForDrops()
                     .sound(SoundType.CALCITE)));
-    public static final DeferredBlock<Block> ANCIENTWOOD_PLANKS = registerBlock("ancientwood_stone",
+    public static final DeferredBlock<Block> ANCIENTWOOD_PLANKS = registerBlock("ancientwood_planks",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(2F, 3.0F)
                     .mapColor(MapColor.WOOD)
@@ -104,7 +104,7 @@ public class ModBlocks {
     public static final DeferredBlock<FenceGateBlock> ANCIENTWOOD_FENCE_GATE = registerBlock("ancientwood_fence_gate",
             () -> new FenceGateBlock(WoodType.OAK, BlockBehaviour.Properties.of()
                     .strength(2f, 3f)));
-    public static final DeferredBlock<DoorBlock> ANCIENTWOOD_DOOR = registerBlock("ancientwood_stairs",
+    public static final DeferredBlock<DoorBlock> ANCIENTWOOD_DOOR = registerBlock("ancientwood_door",
             () -> new DoorBlock(BlockSetType.OAK,
                     BlockBehaviour.Properties.of()
                             .strength(2f, 3f)
